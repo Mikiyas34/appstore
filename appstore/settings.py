@@ -28,7 +28,8 @@ SECRET_KEY = 'django-insecure-seadus5s^bh2((z$ig!+*nehjb=!g^vqygwy8)mt$ctp&gpg$i
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'appstore-kxj2.onrender.com'
+    'appstore-kxj2.onrender.com',
+    'localhost'
 ]
 
 
