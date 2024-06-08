@@ -1,21 +1,38 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Register - AppStore</title>
-    <link rel="stylesheet" type="text/css" href="{% static
-    "./static/register/style.css" %} %}"/>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'register/style.css'%}"
+    />
   </head>
   <body>
-    <form action="POST">
-      <input type="text" placeholder="User Name" />
-      <input type="password" name="" id="" placeholder="Password" />
-      <select name="" id="">
-        <option value="admin">Admin</option>
-        <option value="user">User</option>
-      </select>
-    </form>
+    <div class="wrapper">
+      <form method="POST">
+        <h2>Register</h2>
+        {% csrf_token %}
+        <div class="field">
+          <label for="username">User Name</label>
+          {{form.username}}
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+
+          {{form.password}}
+        </div>
+
+        <div class="field">
+          <label for="role">Role</label>
+          {{form.role}}
+        </div>
+        <input type="submit" value="register" class="submit" />
+      </form>
+    </div>
   </body>
 </html>
