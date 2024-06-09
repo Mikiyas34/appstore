@@ -6,7 +6,7 @@ class User(AbstractUser):
         ("Admin", "Admin"),
         ("User", "User")
     ]
-    role = models.CharField(max_length=20, choices=ROLE_CHOICES) 
+    role = models.CharField(max_length=20, choices=ROLE_CHOICES, default="User", blank=False, null=False) 
     
     def __str__(self) -> str:
         return self.username

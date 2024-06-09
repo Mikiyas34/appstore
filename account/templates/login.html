@@ -5,39 +5,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Register - AppStore</title>
+    <title>Login - AppStore</title>
     <link
       rel="stylesheet"
       type="text/css"
-      href="{% static 'register/style.css'%}"
+      href="{% static 'login/style.css'%}"
     />
   </head>
   <body>
     <div class="wrapper">
       <form method="POST">
-        <h2>Register</h2>
+        <h2>Login</h2>
         {% csrf_token %}
         <div class="field">
           <label for="username">User Name</label>
-          {{form.username}}
+          <input type="text" name="username" />
         </div>
         <div class="field">
           <label for="password">Password</label>
-
-          {{form.password}}
-        </div>
-        <div class="field">
-          <label for="confirm password">Confirm Password</label>
-          {{form.password_confirm}}
+          <input type="password" name="password" id="" />
         </div>
 
-        <div class="field">
-          <label for="role">Role</label>
-          {{form.role}}
-        </div>
-        <input type="submit" value="register" class="submit" />
+        <input type="submit" value="Login" class="submit" />
       </form>
-      <a href="{% url 'login' %}">Log in</a>
+      <a href="{% url 'register' %}">Create an Account</a>
     </div>
   </body>
 </html>
