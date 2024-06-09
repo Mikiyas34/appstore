@@ -1,0 +1,24 @@
+img {
+  width: 7rem;
+}
+
+.points {
+  padding: 1rem;
+  color: #fff;
+  background: #b700ff;
+}
+
+.app {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: #0000007d 0 0 4px;
+  padding: 1rem;
+  box-sizing: border-box;
+  border-radius: 5px;
+  margin: 10px 0;
+  justify-content: space-between;
+}
+.name p {
+  margin: 0;
+}

@@ -1,31 +1,31 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Apps - Appstore</title>
+    <title>{{user.username}} - Appstore</title>
     <link rel="stylesheet" href="{% static 'css/global.css' %}" />
-    <link rel="stylesheet" href="{% static 'apps.css' %}" />
   </head>
   <body>
     <div class="wrapper">
       <div class="menu">{% include 'menu_bar.html' %}</div>
       <div class="mid">
-        {% for app in apps %}
-        <div class="app">
-          <div class="image">
-            <img src="{{ app.image.url }}" alt="{{app.name}} image" />
+        <div class="profile">
+          <div>
+            <span>User Name</span>
+            <h1>{{user.username}}</h1>
           </div>
-          <div class="name">
-            <p>{{app.name}}</p>
-            <a href="{{app.id}}">Details</a>
+          <div>
+            <span>Points earned</span>
+            <p>{{user.points}}</p>
           </div>
-          <div class="points">
-            <span>{{app.points}} Points</span>
+          <div>
+            <span>Task completed</span>
+            <p>{{user.task_completed}}</p>
           </div>
         </div>
-        {% endfor %}
       </div>
     </div>
   </body>

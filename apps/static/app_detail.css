@@ -1,0 +1,69 @@
+.app-detail {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+img {
+  width: 7rem;
+}
+
+.app-link {
+  color: #000;
+}
+
+.points {
+  padding: 1rem;
+  color: #fff;
+  background: #b700ff;
+}
+#screenshot-preview {
+  overflow: hidden;
+}
+
+#screenshot-preview,
+#file {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+#file {
+  z-index: 2;
+  opacity: 0;
+  cursor: pointer;
+}
+#screenshot-preview img {
+  width: 100%;
+}
+
+.top,
+.screenshot {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  box-shadow: #0000007d 0 0 4px;
+  padding: 1rem;
+  box-sizing: border-box;
+  border-radius: 5px;
+  position: relative;
+}
+.dragover {
+  background-color: #000;
+}
+.screenshot {
+  width: 100%;
+  flex-direction: column;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.screenshot .image svg {
+  width: 13rem;
+}
+
+.name {
+  display: flex;
+  flex-direction: column;
+}

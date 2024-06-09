@@ -1,3 +1,19 @@
-{% include 'menu_bar.html' %}
-<h1>User</h1>
-{% include 'apps.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Appstore</title>
+    <link rel="stylesheet" href="{% static 'css/global.css' %}" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="menu">{% include 'menu_bar.html' %}</div>
+      <div class="mid">
+        <h1>Welcome, {{user.username}}</h1>
+      </div>
+    </div>
+  </body>
+</html>

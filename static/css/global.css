@@ -17,8 +17,13 @@ body {
 .mid {
   margin: 0;
   width: 100%;
+  height: 100%;
   box-sizing: border-box;
   padding: 1rem;
+  overflow: scroll;
+}
+.mid::-webkit-scrollbar {
+  background-color: transparent;
 }
 .wrapper {
   background-color: rgb(255, 255, 255);
