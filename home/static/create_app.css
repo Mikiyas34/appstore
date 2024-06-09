@@ -1,0 +1,69 @@
+.form-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-logo {
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+#logo-preview {
+  width: 10rem;
+  height: 10rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+#logo-preview img {
+  width: 100%;
+}
+#blank-logo {
+  position: absolute;
+}
+.add-logo .logo-input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  opacity: 0;
+  cursor: pointer;
+}
+.add-logo svg {
+  width: 10rem;
+}
+form {
+  width: 23rem;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  color: #000;
+  padding: 1rem;
+  box-sizing: border-box;
+  border-radius: 5px;
+  gap: 1rem;
+  box-shadow: #0000004f 0 0 4px 0px;
+}
+
+input,
+select {
+  padding: 1rem;
+  color: #212121;
+  border-radius: 5px;
+  border: solid 1px #dfdfdf;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.create-btn {
+  background: #aa36ff;
+  color: #fff;
+}

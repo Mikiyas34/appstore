@@ -1,0 +1,16 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/menu.css' %}" />
+<ul>
+  <div class="brand">
+    <h1>AppStore</h1>
+  </div>
+  {% if user.role == 'Admin' %}
+  <li><a href="{% url 'home' %}">Home</a></li>
+  <li><a href="{% url 'profile' %}">Profile</a></li>
+  <li class="add-app"><a href="{% url 'apps' %}">Add App</a></li>
+  {% else %}
+  <li><a href="{% url 'points' %}">Points</a></li>
+  <li><a href="{% url 'tasks' %}">Tasks</a></li>
+  <li><a href="{% url 'logout' %}">Logout</a></li>
+  {% endif %}
+</ul>
