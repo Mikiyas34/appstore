@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{app.name}} - Appstore</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="menu">{% include 'menu_bar.html' %}</div>
+      <div class="mid">
+        <div class="app-detail">
+          <img src="{{ app.image.url }}" alt="{{app.name}} image" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

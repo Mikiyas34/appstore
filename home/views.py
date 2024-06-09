@@ -8,14 +8,13 @@ def home(request):
     }
     if request.user.is_authenticated:
         user = request.user
-
         if user.role == 'Admin':
-            return render(request, 'admin.html')
+            return render(request, 'admin.html', {'user': user})
         elif user.role == 'User':
-            return render(request, 'user.html')
+            return render(request, 'user.html', {'user': user})
+        else:
+            return render(request, 'index.html', context)
     else:
         return render(request, 'index.html', context)
     
 
-def create_app(request):
-    return render(request, "create_app.html")

@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin - Appstore</title>
     <link rel="stylesheet" href="{% static 'admin.css'%}" />
+    <link rel="stylesheet" href="{% static 'css/global.css'%}" />
   </head>
   <body>
     <div class="wrapper">
       <div class="menu">{% include 'menu_bar.html'%}</div>
-      <div class="welcome">
+      <div class="mid">
         <h1>Hello {{user.username}}</h1>
       </div>
     </div>

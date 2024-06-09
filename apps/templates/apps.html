@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apps - Appstore</title>
+    <link rel="stylesheet" href="{% static 'css/global.css' %}" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="menu">{% include 'menu_bar.html' %}</div>
+      <div class="mid">
+        {% for app in apps %}
+        <div class="app">
+          <div class="image">
+            <img src="{{ app.image.url }}" alt="{{app.name}} image" />
+          </div>
+          <div>
+            <p>{{app.name}}</p>
+            <a href="{{app.id}}">Details</a>
+          </div>
+          <div class="points">
+            <span>{{app.points}} Points</span>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </body>
+</html>
