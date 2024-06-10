@@ -4,9 +4,14 @@ from .models import App
 from django.contrib.auth.decorators import login_required
 
 
+@login_required
 def get_apps(request):
-    apps = App.objects.all()
-    return render(request, 'apps.html', {'apps': apps})
+    user = request.user
+    if user.role == 'Admin':
+        return redirect('/')
+    else: 
+        apps = App.objects.all()
+        return render(request, 'apps.html', {'apps': apps})
 
 
 def get_app(request, id):
@@ -33,7 +38,7 @@ def create_app(request):
                 points=points
             )
             app.save()
-            return redirect('apps')
+            return redirect('/')
         else: 
             context = {
                 'error': 'All fields are required.',

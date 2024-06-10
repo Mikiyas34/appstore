@@ -5,13 +5,12 @@
     <h1>AppStore</h1>
   </div>
   <li><a href="{% url 'home' %}">Home</a></li>
-  <li><a href="{% url 'apps' %}">Apps</a></li>
   <li><a href="{% url 'logout' %}">Logout</a></li>
   {% if user.role == 'Admin' %}
   <li class="add-app"><a href="{% url 'create_app' %}">Add App</a></li>
   {% else %}
+  <li><a href="{% url 'apps' %}">Apps</a></li>
   <li><a href="{% url 'profile' %}">Profile</a></li>
-  <li><a href="{% url 'points' %}">Points</a></li>
   <li><a href="{% url 'tasks' %}">Tasks</a></li>
   {% endif %}
 </ul>

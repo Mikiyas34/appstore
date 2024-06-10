@@ -9,6 +9,7 @@ class User(AbstractUser):
     role = models.CharField(max_length=20, choices=ROLE_CHOICES, default="User", blank=False, null=False) 
     task_completed = models.IntegerField(default=0)
     points = models.IntegerField(default=0)
+    tasks = models.ManyToManyField('apps.App')
 
     def __str__(self) -> str:
         return self.username
